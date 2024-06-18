@@ -14,14 +14,14 @@ public class RegisterPage extends Utility {
 down, email, Password, Confirm Password, Register Button, "First name is required.","Last name
 is required.", "Email is required.","Password is required.", "Password is required." error message,
 "Your registration completed" message, "CONTINUE" button
-Locators and it's actions
+Locators and it's actions*/
 
-     */ @CacheLookup
-    @FindBy(xpath = "//h1[normalize-space()='Register']")
-    WebElement registerHeading;
+     @CacheLookup
+  @FindBy(xpath= "//h1[text()='Register']")
+   WebElement registerHeading;
 
     @CacheLookup
-    @FindBy(xpath = "//button[@id='register-button']")
+    @FindBy(xpath = "//a[@class='ico-register']")
     WebElement registerButton;
 
     @CacheLookup
@@ -88,8 +88,8 @@ Locators and it's actions
     public String getRegisterHeading() {
         Reporter.log("Get registration heading " + registerHeading.toString());
         CustomListeners.test.log(Status.PASS, "Get registration heading " + registerHeading.toString());
-        return getTextFromElement(registerHeading);
-    }
+       return getTextFromElement(registerHeading);
+   }
 
     public void clickOnRegisterButton() {
         clickOnElement(registerButton);

@@ -49,10 +49,10 @@ y()
 
     @Test(groups = {"sanity", "smoke", "regression"})
     public void verifyUserShouldNavigateToRegisterPageSuccessfully() {
-        homePage.clickOnRegisterLink();     //Click on register link
-        String expMsg = "Register";
-        String actMsg = registerPage.getRegisterHeading();
-        Assert.assertEquals(actMsg, expMsg, "Register page not displayed");     //Verifying navigation of register page
+       homePage.clickOnRegisterLink();     //Click on register link
+      String expMsg = "Register";
+     String actMsg = registerPage.getRegisterHeading();
+      Assert.assertEquals(actMsg, expMsg, "Register page not displayed");     //Verifying navigation of register page
     }
 
     @Test(groups = {"smoke", "regression"})
